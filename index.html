@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Portfolio Website</title>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Tan Tran</a>
+
+            <nav>
+                <!--<a href="#home" > Home</a> --> <!-- Home link is not needed as it is the default section -->
+                <a href="#experience"  > Experience</a>
+                <a href="#projects"  > Projects</a>
+                <a href="#skills"  > Skills</a>
+                <a href="#skills" > Contact</a> <!-- updated href to point to skills. Change back to contact if you need to go to another page for contact.-->
+            </nav>
+        </header>
+        <section id="home" class="home">
+            <!--<div id="logo" class="logo">Tan Tran</div> Separate logo -->
+            <div class="home-img">
+                <img src="main.jpg" alt="">
+            </div>
+            <div class="home-content">
+                <h1>Hi, It's <span>Tan</span></h1>
+                <h3 class="typing-text">I'm a <span></span></h3>
+                <p>Highly motivated and detail-oriented Computer Scientist with experience in software development, integration, system administration, and technical 
+                    leadership. Proven track record of successfully managing complex technical projects, leading cross-functional teams, and developing 
+                    innovative solutions.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/tan-tran-65a71a210/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Eightoo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:ttran6487@gmail.com?subject=Contact%20Me&body=Hi%20Tan,%20I%20would%20like%20to%20connect%20with%20you."><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/tantan8o/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="#C:\Users\Tan\Documents\Projects\website\tanResumeJuly2025.pdf" class="btn" download="tanResumeJuly2025.pdf">Resume</a>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <h4>402d Software Engineering Group (SWEG), Robins Air Force Base</h4>
+            <h4>Software Engineer</h4>
+            <ul>
+                <li>Directly support the Air Force's $59.5M Distributed Common Ground System through timely integration and 
+                testing of core mission applications, enhancing capabilities integral to the warfighter's ability to execute 
+                command, control, intelligence, surveillance, and reconnaissance activities globally.</li>
+                <li>Contributed to the software development lifecycle through rigorous testing and integration of mission planner and command and control software for sensors, ensuring seamless functionality and identifying areas for improvement.</li>
+                <li>Collaborated with development teams to troubleshoot and resolve complex technical issues, leveraging analytical skills to drive efficient solutions.</li>
+                <li>Developed and implemented integration strategies, resulting in 100% deployment success and a 30% reduction in troubleshooting time. </li>
+                <li>Conducted thorough analysis and debugging, identifying and reporting software bugs, system compatibility issues, and other technical problems to development teams.</li>
+                <li>Demonstrated strong technical leadership, leading installs, demos, and site visits, and ensuring effective communication between technical teams and stakeholders.</li>
+            </ul>
+            <h4> 402d Software Engineering Group (SWEG), Robins Air Force Base</h4>
+            <h4>Software Engineer Intern</h4>
+            <u1>
+                <li>Designed and developed a cutting-edge web application utilizing a diverse tech stack (Node, Java, Spring Boot, React, Docker, Kubernetes, HTML/CSS) to analyze high-resolution aerial imagery, enabling object detection and interactive annotation capabilities.</li>
+                <!--<li>Implemented features for user interaction, including annotations, marks, and drawings, enhancing the application's functionality and user experience.</li> -->
+                <li>Gained hands-on experience with full-stack development, containerization (Docker), and orchestration (Kubernetes), applying industry-standard technologies to drive project goals.</li>
+            </u1>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <h4>Cinema Booking Site</h4>
+            <u1>
+                <li>Designed and developed a website for booking movie tickets using Node.js, HTML, CSS, and SQL.</li>
+                <li>Implemented user authentication and authorization for secure booking.</li>
+                <li>Developed a payment gateway integration for seamless transactions.</li>
+            </u1>
+
+            <h4>Poké-Dex Application</h4>
+            <u1>
+                <li>Developed a Java-based application that fetches Pokémon data and the average price of the card.</li>
+                <li>Utilized APIs to retrieve data and implemented data caching for improved performance.</li>
+                <li>Designed a user-friendly interface for easy navigation and search functionality.</li>
+            </u1>
+
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <u1>
+                <li>Programming: C, C++, Java, Python, JavaScript, HTML, CSS, SQL, PHP, MATLAB, React, Node.js </li>
+                <li>Tools & Frameworks: Docker, Kubernetes, AWS, VMware VCenter, SQL, RHEL</li>
+                <li>Project Management: Jira, Kanban, Agile Methodologies, Github</li>
+            </u1>
+            <h2>Contact</h2>
+                <form action="https://formspree.io/f/mnnzqzod" method="POST"> <!-- Replace with your Formspree form ID -->
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+            
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+        </section>
+
+    </body>
+</html>

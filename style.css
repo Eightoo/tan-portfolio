@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color:white;
+}
+
+header{
+    margin-top: 20px;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter:drop-shadow(10px);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav {
+    position: absolute; /* Positions the nav relative to the page */
+    top: 20px; /* Adjusts the vertical position */
+    right: 20px; /* Moves the nav to the right of the screen */
+    display: flex; /* Aligns navigation links horizontally */
+    gap: 2rem; /* Adds spacing between navigation links */
+    z-index: 100; /* Ensures the nav stays above other elements */
+}
+
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-right: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover, 
+nav a.active{
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;;
+        display: none;
+        top: 0%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid red;
+        border-bottom: 3px solid red;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: black;
+        border-top: 0.1rem solid black;
+    }
+    nav.active{
+        display:block;
+    }
+
+    nav a{
+        display:block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid red;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: red;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: red;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    
+    /*transform: scale(1.1);*/
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border:0.2rem solid red;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: red;
+    box-shadow: 0 0 25px red;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: red;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: red;
+    color: black;
+    transform: scale3d(1.03);
+    box-shadow: 0 0 25px red;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Software Engineer!";
+    color: red;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid red;
+    }
+}
+
+@keyframes words{
+    0%, 25%{
+        content: "Software Engineer!";
+    }
+    26%, 50%{
+        content: "Software Integrator!";
+    }
+    51%, 75%{
+        content: "Test Operator!";
+    }
+    76%, 100%{
+        content: "System administrator!";
+    }
+}
+
+@media (max-width: 1000px){
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width:70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+/* Styling for h2 */
+h2 {
+    font-size: 3.5rem; /* Adjust font size */
+    font-weight: 700; /* Make it bold */
+    color: white; /* Text color */
+    margin-bottom: 1rem; /* Add spacing below */
+    text-transform: uppercase; /* Make text uppercase for emphasis */
+    letter-spacing: 0.1rem; /* Add spacing between letters */
+}
+
+/* Styling for h4 */
+h4 {
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: 600; /* Slightly less bold than h2 */
+    color: white; /* Text color */
+    margin-bottom: 1rem; /* Add spacing below */
+}
+
+/* Styling for ul */
+ul {
+    list-style-type: disc; /* Adds bullet points */
+    margin-left: 2rem; /* Indents the list */
+    margin-top: 1rem; /* Adds spacing above the list */
+    color: white; /* Sets text color */
+    padding-left: 1rem; /* Adds padding for better alignment */
+}
+
+/* Styling for li */
+li {
+    font-size: 2.0rem; /* Adjust font size */
+    line-height: 1.8; /* Adds spacing between list items */
+    margin-bottom: 0.5rem; /* Adds spacing below each item */
+}
+
+/* Styling for h4 in the projects section */
+#projects h4 {
+    font-size: 2.8rem; /* Adjust font size */
+    font-weight: 700; /* Make it bold */
+    color: lightblue; /* Change text color */
+    margin-bottom: 1rem; /* Add spacing below */
+}
+
+/* Styling for ul in the projects section */
+#projects ul {
+    list-style-type: square; /* Use square bullet points */
+    margin-left: 2rem; /* Indent the list */
+    margin-top: 1rem; /* Add spacing above the list */
+    color: lightblue; /* Change text color */
+    padding-left: 1rem; /* Add padding for better alignment */
+}
+
+/* Styling for li in the projects section */
+#projects ul li {
+    font-size: 1.6rem; /* Adjust font size */
+    line-height: 1.8; /* Add spacing between list items */
+    margin-bottom: 0.5rem; /* Add spacing below each item */
+}
+
+/* Styling for the Contact Me section */
+#contact {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    font-size: 1.8rem;
+    padding: 0.7rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.logo {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold;
+    color: red; /* Adjust color */
+    z-index: 100; /* Ensure it stays above other elements */
+}
