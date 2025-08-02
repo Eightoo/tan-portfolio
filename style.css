@@ -390,3 +390,18 @@ button:hover {
     color: red; /* Adjust color */
     z-index: 100; /* Ensure it stays above other elements */
 }
+
+.github-button { /*Github button styliong*/
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #444c56;
+}
