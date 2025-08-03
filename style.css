@@ -8,6 +8,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-padding-top: 150px; /* adjust to match your navbar height */
+}
+
 body {
   background-color: #121212;
   color: #e0e0e0;
