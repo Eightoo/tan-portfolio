@@ -1,422 +1,320 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
-body{
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    background-color: black;
-    color:white;
-    font-family: 'Roboto', Arial, sans-serif;
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    background: #181818;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.logo{
-    font-size: 3rem;
-    color: red;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-.logo:hover{
-    transform: scale(1.1);
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    padding: 1rem 2rem;
-}
-
-
-nav a{
-    font-size: 1.8rem;
-    color: white;
-    margin-right: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-
-nav a:hover {
-    color: #ff4d4d;
-}
-
-@media(max-width:995px){
-    nav{
-        position: absolute;;
-        display: none;
-        top: 0%;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid red;
-        border-bottom: 3px solid red;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: black;
-        border-top: 0.1rem solid black;
-    }
-    nav.active{
-        display:block;
-    }
-
-    nav a{
-        display:block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid red;
-    }
-}
-
-section{
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
-}
-
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: black;
-}
-
-.home .home-content h1{
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-span {
-    color: red;
-}
-
-.home-content h3{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-
-.home-content p{
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-}
-
-.home-img {
-    border-radius: 50%;
-}
-
-.home-img img{
-    position: relative;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: red;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.home-img img:hover{
-    
-    /*transform: scale(1.1);*/
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-.social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border:0.2rem solid red;
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: white;
-}
-
-.social-icons a:hover{
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: red;
-    box-shadow: 0 0 25px red;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background-color: black;
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: red;
-    letter-spacing: 0.3rem;
-    font-weight: 600;
-    border: 2px solid;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: red;
-    color: black;
-    transform: scale3d(1.03);
-    box-shadow: 0 0 25px red;
-}
-
-.typing-text {
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-}
-
-.typing-text span{
-    position: relative;
-}
-
-.typing-text span::before{
-    content: "Software Engineer!";
-    color: red;
-    animation: words 20s infinite;
-}
-
-.typing-text span::after{
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid black;
-    right: -8;
-    animation: cursor 0.6s infinite;
-}
-
-@keyframes cursor{
-    to{
-        border-left: 3px solid red;
-    }
-}
-
-@keyframes words{
-    0%, 25%{
-        content: "Software Engineer!";
-    }
-    26%, 50%{
-        content: "Software Integrator!";
-    }
-    51%, 75%{
-        content: "Test Operator!";
-    }
-    76%, 100%{
-        content: "System administrator!";
-    }
-}
-
-@media (max-width: 1000px){
-    .home {
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width:70vw;
-        margin-top: 4rem;
-    }
-}
-
-
-/* Styling for h2 */
-h2 {
-    font-size: 2.5rem;
-    color: #ff4d4d;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    letter-spacing: 2px;
-    text-align: center;
-}
-/* Styling for h4 */
-h4 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* Styling for ul */
-ul {
-    margin: 0 auto 2rem auto;
-    padding-left: 2rem;
-    max-width: 700px;
-    color: #eee;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-/* Styling for li */
-li {
-    font-size: 2.0rem; /* Adjust font size */
-    line-height: 1.8; /* Adds spacing between list items */
-    margin-bottom: 0.5rem; /* Adds spacing below each item */
-}
-
-/* Styling for h4 in the projects section */
-#projects h4 {
-    font-size: 2.8rem; /* Adjust font size */
-    font-weight: 700; /* Make it bold */
-    color: white; /* Change text color */
-    margin-bottom: 1rem; /* Add spacing below */
-}
-
-/* Styling for ul in the projects section */
-#projects ul {
-    list-style-type: square; /* Use square bullet points */
-    margin-left: 2rem; /* Indent the list */
-    margin-top: 1rem; /* Add spacing above the list */
-    color: white; /* Change text color */
-    padding-left: 1rem; /* Add padding for better alignment */
-}
-
-/* Styling for li in the projects section */
-#projects ul li {
-    font-size: 1.6rem; /* Adjust font size */
-    line-height: 1.8; /* Add spacing between list items */
-    margin-bottom: 0.5rem; /* Add spacing below each item */
-}
-
-/* Styling for the Contact Me section */
-#contact {
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 600px;
-    color: white;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-label {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-input, textarea {
-    font-size: 2rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-button {
-    font-size: 1.8rem;
-    padding: 0.7rem;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: darkred;
+  position: sticky;
+  top: 0;
+  background: #181818;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
 }
 
 .logo {
-    position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    font-size: 2.5rem; /* Adjust font size */
-    font-weight: bold;
-    color: red; /* Adjust color */
-    z-index: 100; /* Ensure it stays above other elements */
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #ff4d4d;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.github-btn { /* GitHub button styling */
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  background-color: #0366d6;
-  color: #fff;
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  color: #e0e0e0;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-left: 32px;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff4d4d;
+}
+
+.section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 77, 77, 0.2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+}
+
+h1 span {
+  color: #ff4d4d;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #ff4d4d;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #ff4d4d;
+}
+
+h4 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #f0f0f0;
+}
+
+h5 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.home-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.home-text {
+  flex: 1 1 400px;
+  max-width: 550px;
+}
+
+.home-text p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.home-img {
+  /* this is for shou pic
+  flex: 1 1 300px;
+  max-width: 320px;
+  text-align: center;
+  */
+  flex: 1 1 300px;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.home-img img {
+  /* this is for shou pic
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 8px rgba(255, 77, 77, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  */
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px red;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-img img:hover {
+  /* this is for shou pic
+  transform: scale(1.05);
+  box-shadow: 0 0 40px 12px rgba(255, 77, 77, 0.8);
+  */
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px red;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.social-icons a {
+  color: #e0e0e0;
+  font-size: 2.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff4d4d;
+  color: #121212;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255, 77, 77, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e04343;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(224, 67, 67, 0.8);
+}
+
+/* Cursor style for typing animation */
+.cursor {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--accent-color);
+  user-select: none;
+  /* blinking handled by JS */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255, 77, 77, 0.5);
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 20px;
 }
 
 .github-btn:hover {
-  background-color: #0356b6;
+  background-color: #e04343;
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(224, 67, 67, 0.8);
 }
 
 .github-icon {
   fill: currentColor;
+  width: 20px;
+  height: 20px;
 }
 
-section {
-    padding: 5rem 0;         /* More space inside the section */
-    margin-bottom: 4rem;     /* More space between sections */
-    background: rgba(30, 30, 30, 0.8);
-    border-radius: 1rem;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+input,
+textarea {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.3rem;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  resize: vertical;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #404040;
+}
+
+button.btn {
+  background-color: #ff4d4d;
+  color: #121212;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 32px;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #e04343;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 1.6rem;
+  }
 }
